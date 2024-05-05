@@ -12,6 +12,7 @@ function TodoList() {
         if (!todoList.includes(toname)) {
             let finalDolist = [...todoList, toname];
             setTodoList(finalDolist);
+            event.target.toname.value = '';
         } else {
             alert("TodoName Already Exists.....")
         }
@@ -28,7 +29,7 @@ function TodoList() {
     })
     return (
         <div className='App'>
-            <h1>Tttttttttt</h1>
+            <h1>Todo List</h1>
             <form onSubmit={saveTodoList}>
                 <input type='text' name='toname' />
                 <button>Save</button>
@@ -47,7 +48,7 @@ export default TodoList
 
 // eslint-disable-next-line react/prop-types, no-unused-vars
 function TodoListItem({value,indexnumber,todoList,setTodoList}) {
-    const {status,setStatus}=useState(false);
+    const [status,setStatus]=useState(false);
     const deleteRow=()=>{
         // eslint-disable-next-line react/prop-types
         let finalData= todoList.filter((v,i)=>i!=indexnumber)
@@ -57,7 +58,7 @@ function TodoListItem({value,indexnumber,todoList,setTodoList}) {
         setStatus(!status)
     }
        return (
-        <li className={(status)?"completetodo":''} onClick={checkStatus}>
+        <li className={status ? "completetodo" : ''}  onClick={checkStatus}>
          {indexnumber+1} {value}<span onClick={deleteRow}>&times;</span>
         </li>
     )

@@ -1,0 +1,50 @@
+form input{
+    padding: 10px;
+    width: 20%;
+    outline: none;
+   }
+   form button{
+     padding: 10px;
+     background-color:black ;
+     color: white;
+     outline: none;
+     width: 5%;
+     margin-left: 10px;
+   }
+   
+   .outerdiv{
+     display: flex;
+     justify-content: center;
+   }
+   
+   
+   .outerdiv ul{
+     margin: 0px;
+     margin-top: 30px;
+     padding: 0px;
+     width: 50%;
+     list-style: none;
+   }
+   
+   .outerdiv ul li{
+     color: white;
+     padding: 10px;
+     font-size: 25px;
+     margin-bottom: 20px;
+     position: relative;
+     text-align: left;
+     background-color: black;
+   }
+   .outerdiv ul li span{
+     cursor: pointer;
+     right: 20px;
+     position: absolute;
+   }
+   
+   .completetodo{
+     text-decoration: line-through;
+     color: rgb(241, 91, 91) !important;
+     background-color: rgb(236, 236, 203) !important;
+   }
+   
+   
